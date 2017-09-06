@@ -1,0 +1,144 @@
+#layout {
+  max-width: 640px;
+  min-width: 300px;
+  margin: 0px auto;
+  background-color: #fff;
+}
+#header {
+  width: 100%;
+}
+#header .navbar {
+  margin-bottom: 0;
+  z-index: 2;
+  width: 100%;
+}
+#header .navbar .container {
+  text-align: center;
+}
+#header .navbar .container .navbar-toggle {
+  float: left;
+  border: 0;
+  color: red;
+}
+#header .navbar .container .navbar-toggle:hover {
+  background-color: #ddd;
+}
+#header .navbar .container > span {
+  color: red;
+  line-height: 50px;
+  font-size: 18px;
+}
+#header .navbar .container > span > a {
+  color: #000;
+}
+#header .navbar .container .search {
+  float: right;
+  color: red;
+  line-height: 50px;
+  font-size: 18px;
+}
+#header .navbar .collapse .navbar-nav > li > a > i {
+  float: right;
+}
+#tab > .container > .ul-wapper > .nav-tabs {
+  border-bottom: 0;
+  width: 100%;
+}
+#tab > .container > .ul-wapper > .nav-tabs > li {
+  width: 25%;
+  font-size: 12px;
+}
+#tab > .container > .ul-wapper > .nav-tabs > li:active > a {
+  border-bottom: 2px solid red;
+  background-color: transparent;
+}
+#tab > .container > .ul-wapper > .nav-tabs > li > a {
+  border: 0;
+  text-align: center;
+}
+#tab > .container > .ul-wapper > .nav-tabs > li > a > img {
+  width: 100%;
+}
+#tab > .container > .ul-wapper .tab-content {
+  margin-top: 20px;
+  font-size: 12px;
+}
+#tab > .container > .ul-wapper .tab-content .tab-pane > ul > li {
+  float: left;
+  width: 50%;
+  margin-bottom: 15px;
+  height: 255px;
+  border: 1px solid #ddd;
+}
+#tab > .container > .ul-wapper .tab-content .tab-pane > ul > li > a {
+  position: relative;
+}
+#tab > .container > .ul-wapper .tab-content .tab-pane > ul > li > a > img {
+  width: 182px;
+  height: 220px;
+}
+#tab > .container > .ul-wapper .tab-content .tab-pane > ul > li > a .txt {
+  position: absolute;
+  line-height: 30px;
+  width: 182px;
+  height: 30px;
+  bottom: 0px;
+  color: #fff;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#tab > .container > .ul-wapper .tab-content .tab-pane > ul > li > a > P {
+  text-align: center;
+}
+#layout1 .navbar > a {
+  float: left;
+  font-size: 30px;
+  color: red;
+  text-decoration: none;
+}
+#layout1 .navbar > h4 {
+  text-align: center;
+  line-height: 40px;
+}
+#layout1 #context1 .s {
+  border-bottom: 1px solid #ddd;
+  height: 110px;
+  margin: 5px;
+}
+#layout1 #context1 .s > aside {
+  float: left;
+  width: 25%;
+}
+#layout1 #context1 .s > aside > img {
+  width: 80%;
+}
+#layout1 #context1 .s > article {
+  float: right;
+  width: 75%;
+}
+#layout1 #context1 .s > article > ul > li > p {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+#layout1 #context1 .s > article > ul > li > p:first-child {
+  font-size: 14px;
+  font-weight: 700;
+}
+#layout2 .navbar > a {
+  float: left;
+  font-size: 30px;
+  color: red;
+  text-decoration: none;
+}
+#layout2 .navbar > h4 {
+  text-align: center;
+  line-height: 40px;
+}
+#layout2 #context2 .gettopics {
+  border-bottom: 1px solid #ddd;
+  height: 100%;
+  margin-bottom: 5px;
+}
+#layout2 #context2 .gettopics > aside > img {
+  width: 100%;
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/base.css">
+
+    <link rel="stylesheet" href="less/index.css">
+
+</head>
+
+<body>
+    <div id="layout">
+        <header id="header">
+            <nav class="navbar navbar-default" data-spy="affix" data-offset-top="200" data-offset-bottom="1000">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <button id="leftbutton" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                        aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    <!-- <a class="navbar-brand hidden-sm hidden-xs" href="#">
+                        <img src="img/logo.png" alt="">
+                    </a>  -->
+                    <span><a href="#">红旅动漫</a></span>
+                    <div class="search"><i class="glyphicon glyphicon-search"></i></div>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#"><img src="img/logo.png" alt=""></a></li>
+                        <li id="lian"><a href="#">连载动漫-get<i>></i></a></li>
+                        <li id="lie"><a href="#">专题列表-get<i>></i></a></li>
+                        <li><a href="#">关于<i>></i></a></li>
+                    </ul>
+                </div>
+
+
+
+            </nav>
+        </header>
+
+        <section id="slide">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+
+                <div class="carousel-inner" role="listbox">
+                    <script type="text/html" id="templateslide">
+                        {{each}}
+                        <div class="item">
+                            <img src="{{$value.img}}" alt="">
+                        </div>
+                        {{/each}}
+                    </script>
+                </div>
+
+                <!-- Controls -->
+                <!-- <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a> -->
+            </div>
+        </section>
+
+        <section id="tab">
+            <div class="container">
+                <div class="ul-wapper">
+
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">新增连载</a></li>
+                        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">新增完结</a></li>
+                        <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">推荐连载</a></li>
+                        <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">推荐完结</a></li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="home">
+                            <script type="text/html" id="templatetab">
+                                <ul class="clearfix">
+                                    {{each}}
+                                    <li><a href=""><img src="{{$value.img}}" alt=""></img><span class="txt">{{$value.update}}</span><p>{{$value.name}}</p></a></li>
+                                    {{/each}}
+                                </ul>
+                            </script>
+
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="profile">...</div>
+                        <div role="tabpanel" class="tab-pane" id="messages">...</div>
+                        <div role="tabpanel" class="tab-pane" id="settings">...</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <div id="layout1" style="display: none">
+        <nav class="navbar navbar-default">
+            <a href=""> < </a>
+            <h4>连载动漫</h4>
+        </nav>
+        <section id="context1">
+            
+                    <script type="text/html" id="templatec">
+                        {{each}}
+                        <div class="s">
+                        <aside><img src="{{$value.img}}" alt=""></aside>
+                         <article>
+                            <ul>
+                                <li>
+                                    <p>{{$value.name}}</p>
+                                    <p>{{$value.episode}}</p>
+                                    <p>{{$value.updateTime}}更新</p>
+                                    <p>下载次数:{{$value.downloadCount}}</p>
+                                </li>
+                            </ul>
+                        </article> 
+                        </div>
+                        {{/each}}
+                    </script>
+           
+        </section>
+    </div>
+
+    <div id="layout2" style="display: none">
+        <nav class="navbar navbar-default">
+            <a href=""> < </a>
+            <h4>专题列表</h4>
+        </nav>
+        <section id="context2">
+                    <script type="text/html" id="templategettopics">
+                        {{each}}
+                        <div class="gettopics">
+                        <aside><img src="{{$value.img}}" alt=""></aside>
+                         <article>
+                            <a href="">{{$value.title}}</a>
+                        </article> 
+                        </div>
+                        {{/each}}
+                    </script>
+        </section>
+    </div>
+
+
+
+
+</body>
+
+</html>
+<script src="js/jquery-1.12.4.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/template-web.js"></script>
+<script src="js/index.js"></script>
+<script>
+
+
+</script>
+
+<!-- <li><a href="">{{$value.name}}<img src="{{$value.img}}" alt=""><span>{{$value.update}}</span></img></a></li>
+                                <li><a href="">{{$value.name}}<img src="{{$value.img}}" alt=""><span>{{$value.update}}</span></img></a></li>
+                                <li><a href="">{{$value.name}}<img src="{{$value.img}}" alt=""><span>{{$value.update}}</span></img></a></li>
+                                <li><a href="">{{$value.name}}<img src="{{$value.img}}" alt=""><span>{{$value.update}}</span></img></a></li>
+                                <li><a href="">{{$value.name}}<img src="{{$value.img}}" alt=""><span>{{$value.update}}</span></img></a></li>
+                                <li><a href="">{{$value.name}}<img src="{{$value.img}}" alt=""><span>{{$value.update}}</span></img></a></li>
+                                <li><a href="">{{$value.name}}<img src="{{$value.img}}" alt=""><span>{{$value.update}}</span></img></a></li>  -->
